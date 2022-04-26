@@ -7,7 +7,18 @@
     <title>{{ $title }}</title>
 </head>
 <body>
-    <h1>{{ $title }}</h1>
-    <p>{{ $content }}</p>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contacts">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>{{ $title }}</h1>
+        <p>{{ $content }}</p>
+    </main>
 </body>
 </html>
