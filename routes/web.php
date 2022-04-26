@@ -13,17 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'home',
-    [
+Route::get('/', function () {
+    $param = [
         'title' => 'Home',
-        'content' => 'Hello World',
-        'nav' => [
-            'Home' => '/',
-            'About' => '/about',
-            'Contact' => '/contacts'
-        ]
-    ]
-);
+        'content' => 'Hello World'
+    ];
+    return view('home', $param);
+})->name('home');
 
-Route::view('/about', 'about');
-Route::view('/contacts', 'contacts');
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+
+Route::get('/contacts', function () {
+    return view('contacts');
+})->name('contacts');
